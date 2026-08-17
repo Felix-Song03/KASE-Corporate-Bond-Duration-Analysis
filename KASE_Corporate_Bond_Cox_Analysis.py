@@ -1090,10 +1090,11 @@ def fit_cox_model(
 
 def main() -> None:
     script_dir = Path(__file__).resolve().parent
-    input_path = script_dir / 'KASE_Corporate_Bonds_2026-07-03.xlsx'
-    cny_fx_path = script_dir / 'CNY-KZT exchange rate.xlsx'
-    usd_fx_path = script_dir / 'USD-KZT exchange rate.xlsx'
-    output_dir = script_dir / 'outputs' / 'cox_clean_results'
+    data_dir = script_dir / 'data'
+    input_path = data_dir / 'KASE_Corporate_Bonds_2026-07-03.xlsx'
+    cny_fx_path = data_dir / 'CNY-KZT exchange rate.xlsx'
+    usd_fx_path = data_dir / 'USD-KZT exchange rate.xlsx'
+    output_dir = script_dir / 'outputs'
     cutoff = ANALYSIS_CUTOFF
 
     output_dir.mkdir(parents=True, exist_ok=True)
